@@ -17,7 +17,6 @@ const LoginSignup = () => {
       setError("Please fill in all fields.");
       return;
     }
-
     if (isSignUp) {
       const userExists = users.find((user) => user.email === email);
       if (userExists) {
@@ -28,29 +27,25 @@ const LoginSignup = () => {
         alert("Account created successfully! You can now log in.");
         setIsSignUp(false);
       }
-    } else {
-      
+    } else { 
       if (email === PERMANENT_EMAIL && password === PERMANENT_PASSWORD) {
         setError("");
         alert("Logged in successfully!");
         navigate("/toviewcreate"); 
-      } else {
-       
+      } else {  
         const validUser = users.find(
           (user) => user.email === email && user.password === password
         );
-
         if (validUser) {
           setError("");
           alert("Logged in successfully!");
           navigate("/toviewcreate");
         } else {
           setError("Invalid email or password.");
-        }
+        }      
       }
-    }
+    }     
   };
-
   const handleChange = (e) => {
     setError("");
     const { id, value } = e.target;
@@ -58,9 +53,8 @@ const LoginSignup = () => {
       setEmail(value);
     } else if (id === "password") {
       setPassword(value);
-    }
+    }     
   };
-
   return (
     <div className="login-signup-page">
       <div className="login-signup-container" style={{ maxWidth: "400px", margin: "0 auto" }}>
@@ -108,5 +102,4 @@ const LoginSignup = () => {
     </div>
   );
 };
-
 export default LoginSignup;

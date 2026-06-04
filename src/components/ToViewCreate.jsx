@@ -1,44 +1,86 @@
 import React from "react";
-import { useNavigate } from "react-router-dom"; // Import useNavigate
+import { useNavigate } from "react-router-dom";
 
 const ToViewCreate = () => {
-  const navigate = useNavigate(); // Initialize navigate
-
-  // Navigate to the View Recipes page
-  const handleViewRecipes = () => {
-    navigate("/view-recipes");
-  };
-
-  // Navigate to the Create Recipe page
-  const handleCreateRecipe = () => {
-    navigate("/create-recipe");
-  };
+  const navigate = useNavigate();
 
   return (
-    <div
-      className="to-view-create"
-      style={{
-        backgroundImage: "url('https://img.freepik.com/free-photo/abstract-blur-coffee-shop_1339-2396.jpg?t=st=1738073641~exp=1738077241~hmac=99236a85c5039b46ec415cb331aa56676e5a5b9f7376c98c94b6caa5df57e91f&w=996')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        minHeight: "100vh",
-        color: "white",
-      }}
-    >
-      <center>
-        <h1>Explore and Manage Your Recipes</h1>
-        <div className="button-container">
-          {/* Button to navigate to View Recipes */}
-          <button onClick={handleViewRecipes} className="view-recipes-btn">
+    <div className="dashboard-page">
+
+      {/* LEFT SIDE */}
+
+      <div className="dashboard-left">
+
+        <p className="small-title">
+          🍴 RECIPE DASHBOARD
+        </p>
+
+        <h1>
+          Cook <br />
+          <span>Something</span> <br />
+          Amazing Today
+        </h1>
+
+        <p className="dashboard-text">
+          Manage your recipes, discover cooking inspiration,
+          and organize your favorite dishes in one stylish place.
+        </p>
+
+        <div className="dashboard-buttons">
+
+          <button
+            className="dashboard-btn"
+            onClick={() => navigate("/view-recipes")}
+          >
             View Recipes
           </button>
 
-          {/* Button to navigate to Create Recipe */}
-          <button onClick={handleCreateRecipe} className="create-recipe-btn">
+          <button
+            className="dashboard-btn"
+            onClick={() => navigate("/create-recipe")}
+          >
             Create Recipe
           </button>
+
         </div>
-      </center>
+
+      </div>
+
+      {/* RIGHT SIDE */}
+
+      <div className="dashboard-right">
+
+        {/* MAIN IMAGE */}
+
+        <div className="image-card main-image">
+          <img
+            src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1200&auto=format&fit=crop"
+            alt="Food"
+          />
+        </div>
+
+        {/* SMALL IMAGES */}
+
+        <div className="small-images">
+
+          <div className="image-card">
+            <img
+              src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?q=80&w=1000&auto=format&fit=crop"
+              alt="Pasta"
+            />
+          </div>
+
+          <div className="image-card">
+            <img
+              src="https://images.unsplash.com/photo-1550547660-d9450f859349?q=80&w=1000&auto=format&fit=crop"
+              alt="Burger"
+            />
+          </div>
+
+        </div>
+
+      </div>
+
     </div>
   );
 };

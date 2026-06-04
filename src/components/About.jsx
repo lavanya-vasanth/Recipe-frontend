@@ -1,36 +1,60 @@
 const About = () => {
-    return (
-      <div className="about-container">
-        <h1>About</h1>
-        <p>This is about My page</p>
-        <div className="images-container">
-          <img
-            src="https://img.freepik.com/premium-photo/indian-hindu-veg-thali-also-known-as-food-platter-is-complete-lunch-dinner-meal-closeup-selective-focus_466689-9094.jpg?w=996"
-            alt="Recipe Collection"
-            className="about-image"
-          />
-       <img
-          src="https://img.freepik.com/premium-vector/real-life-family-moments-vector-illustration-concepts_1253202-67681.jpg?w=740"
-          alt="Recipe Collection 2"
-          className="about-image"
-        />
+  return (
+    <div className="about-page">
+      {/* LEFT CONTENT */}
+      <div className="about-left">
+        <p className="small-heading">ABOUT MY RECIPES</p>
+
+        <h1>
+          Bringing <span>Flavor</span> <br />
+          To Your Kitchen 🍴
+        </h1>
+
+        <p className="about-text">
+          My recipe collection is specially created for food lovers who enjoy
+          exploring delicious dishes, creative cooking ideas, and homemade
+          happiness.
+        </p>
+
+        <p className="about-text">
+          From quick snacks to healthy meals and tasty desserts, every recipe
+          is made with love and simplicity.
+        </p>
+
+        <div className="about-stats">
+          <div className="stat-box">
+            <h2>150+</h2>
+            <p>Recipes</p>
+          </div>
+
+          <div className="stat-box">
+            <h2>50+</h2>
+            <p>Healthy Meals</p>
+          </div>
+
+          <div className="stat-box">
+            <h2>100%</h2>
+            <p>Homemade Love</p>
+          </div>
         </div>
-        <h3>
-          Welcome to my recipe collection! Here, you can explore a variety of
-          recipes ranging from quick and easy meals to more intricate dishes. Whether
-          you're a beginner in the kitchen or an experienced chef, you'll find recipes
-          that suit your taste and skill level. From healthy options to indulgent treats, my collection is designed to
-          inspire and guide you through the cooking process. Let's get cooking and
-          make something delicious...!! The beauty of cooking lies in its creativity. With the right ingredients and
-          techniques, anyone can create a culinary masterpiece. Whether you prefer
-          savory dishes or sweet indulgences, there is a recipe for every craving. So why not give it a try? You can start with simple recipes, such as quick
-          breakfasts, lunch ideas, or snack options.Whether you're cooking for yourself, your family, or friends, you'll find
-          recipes that make your meals memorable. Don't forget to share your culinary
-          creations with others and inspire them to try out new recipes too!
-        </h3>
       </div>
-    );
-  };
-  
-  export default About;
-  
+
+      {/* RIGHT IMAGES */}
+      <div className="about-right">
+        <img
+          src="https://img.freepik.com/free-vector/recipe-book-concept-illustration_114360-7481.jpg?w=740"
+          alt="Recipe"
+          className="about-img img1"
+        />
+
+        <img
+          src="https://img.freepik.com/premium-vector/real-life-family-moments-vector-illustration-concepts_1253202-67681.jpg?w=740"
+          alt="Cooking"
+          className="about-img img2"
+        />
+      </div>
+    </div>
+  );
+};
+
+export default About;
